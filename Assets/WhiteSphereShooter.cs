@@ -4,10 +4,22 @@ using UnityEngine;
 using Microsoft.MixedReality.Toolkit.Input;
 using Microsoft.MixedReality.Toolkit;
 
-public class WhiteSphereShooter : MonoBehaviour
+public class WhiteSphereShooter : MonoBehaviour, IMixedRealityInputHandler
 {
 
     public Transform WhiteSpherePrefab;
+
+
+
+    public void OnEnable()
+    {
+        CoreServices.InputSystem.RegisterHandler<IMixedRealityInputHandler>(this);
+    }
+
+    public void OnDisable()
+    {
+        CoreServices.InputSystem.UnregisterHandler<IMixedRealityInputHandler>(this);
+    }
 
     public void OnAirTap()
     {
@@ -21,6 +33,15 @@ public class WhiteSphereShooter : MonoBehaviour
         }
     }
 
+    public void OnInputDown(InputEventData eventData)
+    {
+        OnAirTap();
+    }
+
+    public void OnInputUp(InputEventData eventData)
+    {
+        
+    }
 
     private void Update()
     {
