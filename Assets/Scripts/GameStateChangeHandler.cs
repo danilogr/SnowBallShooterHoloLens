@@ -17,7 +17,7 @@ public class GameStateChangeHandler : MonoBehaviour
 
     private void OnDisable()
     {
-        GameState.Instance.onGameStateChange.AddListener(OnGameStateChange);
+        GameState.Instance.onGameStateChange.RemoveListener(OnGameStateChange);
     }
 
 }
