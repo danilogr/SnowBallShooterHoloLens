@@ -20,6 +20,7 @@ public class DeleteWhenGone : MonoBehaviour
         if (this.transform.position.y <= -maxDistance)
         {
             Destroy(this.gameObject);
+ 
         }
     }
 }
