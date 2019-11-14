@@ -25,7 +25,9 @@ public class GameState : Singleton<GameState>
             onGameStateChange.Invoke(_currentState);
     }
 
+    [SerializeField]
     private States _currentState;
+
     public States currentState
     {
         set

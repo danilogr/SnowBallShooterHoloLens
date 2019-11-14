@@ -230,6 +230,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: GameStateChange, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  _currentState: 0
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +476,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40084052d6b06634089bfddc9a237cac, type: 3}
+--- !u!1 &1227814343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 40084052d6b06634089bfddc9a237cac,
+    type: 3}
+  m_PrefabInstance: {fileID: 1179561758}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1227814347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227814343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1850d778b5bb504ea2b4133eb9bedee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1227814348
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227814343}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000007, y: 0.020000003, z: 0.019999996}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1627493487
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,8 +565,9 @@ GameObject:
   - component: {fileID: 1685316015}
   - component: {fileID: 1685316019}
   - component: {fileID: 1685316018}
+  - component: {fileID: 1685316020}
   m_Layer: 0
-  m_Name: New Text
+  m_Name: GameStateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -640,14 +673,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateLinkedTransform: 0
-  moveLerpTime: 0.1
-  rotateLerpTime: 0.1
+  moveLerpTime: 0.5
+  rotateLerpTime: 0.5
   scaleLerpTime: 0
   maintainScale: 1
   smoothing: 1
   lifetime: 0
   orientationType: 0
-  localOffset: {x: 0, y: -1, z: 1}
+  localOffset: {x: 0, y: 1, z: 4}
   worldOffset: {x: 0, y: 0, z: 0}
   useAngleStepping: 0
   tetherAngleSteps: 6
@@ -670,6 +703,18 @@ MonoBehaviour:
   additionalOffset: {x: 0, y: 0, z: 0}
   additionalRotation: {x: 0, y: 0, z: 0}
   updateSolvers: 1
+--- !u!114 &1685316020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685316013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea38d61523c28f240ab3bb77fcd02360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1738313944
 GameObject:
   m_ObjectHideFlags: 0
