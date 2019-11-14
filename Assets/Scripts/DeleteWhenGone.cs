@@ -8,6 +8,8 @@ public class DeleteWhenGone : MonoBehaviour
     [Tooltip("How far down can it go before getting destroyed")]
     public float maxDistance = 100f;
 
+   
+
 
     private void Start()
     {
